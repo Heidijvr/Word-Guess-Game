@@ -33,27 +33,40 @@ document.onkeyup = function(event) {
         console.log("Oh no!")
       }
     }
-
+     
     if (!matchFound) {
       triesLeft--;
     }
+
+    if (triesLeft === 0) {
+      // player lost //
+      lossCount++;
+      resetGame();
+    } 
   }
 
+    
   displayScore();
   document.getElementById("lettersGuessed").innerHTML = lettersArray.join(" "); 
 };
 
 $(document).ready(function(){ 
-  currentWord = getRandomWord(allWords);
-  console.log(currentWord);
-  document.getElementById("wordToGuess").innerHTML = currentWord;
-  displayScore();
+  resetGame(); 
  }) 
+
+var resetGame = function() {
+  triesLeft = 12; 
+  currentWord = getRandomWord(allWords);
+  lettersArray = [];
+  displayScore();
+  console.log(currentWord); 
+};
 
 var displayScore = function() {
   document.getElementById("wins").innerHTML = winCount;
   document.getElementById("losses").innerHTML = lossCount;
   document.getElementById("tries").innerHTML = triesLeft;
+  document.getElementById("wordToGuess").innerHTML = currentWord;
 };
 
 var bangmaak = function(naam) {
