@@ -1,6 +1,8 @@
 var lettersArray = [];
 var allWords = ["Pluto", "Eeyore", "Spiderman", "Scrooge", "Homer", "Dopey", "Superman", "Stitch", "Animaniacs", "Popeye", "PorkyPig", "Cinderella", "Bart", "Goofy", "SpeedyGonzales"];
 var currentWord = "";
+var winCount = 0;
+var lossCount = 10;
  
 // Choose a random element from the array
 var getRandomWord = function(words) {
@@ -8,17 +10,26 @@ var getRandomWord = function(words) {
 }
 
 document.onkeyup = function(event) {
-  // Captures the key press, and saves it to a variable.
-  var letter = event.key;
-
-  console.log(letter);
-  lettersArray.push(letter);
-  document.getElementById("lettersGuessed").innerHTML = lettersArray.join(" ");
+  winCount = winCount + 1;
+  lossCount = lossCount - 1;
+  displayScore();  
 };
 
 $(document).ready(function(){ 
   currentWord = getRandomWord(allWords);
   console.log(currentWord);
   document.getElementById("wordToGuess").innerHTML = currentWord;
+  displayScore();
+
+  
  }) 
+
+var displayScore = function() {
+  document.getElementById("wins").innerHTML = winCount;
+  document.getElementById("losses").innerHTML = lossCount;
+};
+
+var bangmaak = function(naam) {
+  console.log("Boo " + naam);
+};
 

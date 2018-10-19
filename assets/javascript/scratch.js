@@ -173,4 +173,9 @@ console.log('randomWord', randomWord);
      var letter = event.key;
    };
  
- 
+   // Captures the key press, and saves it to a variable.
+   var letter = event.key;
+
+   console.log(letter);
+   lettersArray.push(letter);
+   document.getElementById("lettersGuessed").innerHTML = lettersArray.join(" ");
