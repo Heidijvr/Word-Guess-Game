@@ -23,7 +23,7 @@ var textAreaElement = document.getElementsByTagName('textarea') [0];
 
 
 var word = "poespas".toLowerCase().split("");
-var displayedWord = "_".repeat(word.length).split("");
+var displayedLetters = "_".repeat(word.length).split("");
 
 
 guess = "l".toLowerCase();
@@ -36,7 +36,7 @@ console.log(word[i])
 if (word[i] == guess) {
     // alert("Ditsem!")
     console.log("Heita!")
-    displayedWord[i] = guess;
+    displayedLetters[i] = guess;
     matches++;
 }
 }
