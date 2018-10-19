@@ -3,14 +3,14 @@ var allWords = ["Pluto", "Eeyore", "Spiderman", "Scrooge", "Homer", "Dopey", "Su
 var currentWord = "";
 var winCount = 0;
 var lossCount = 0;
- 
+var triesLeft = 12; 
 // Choose a random element from the array
 var getRandomWord = function(words) {
   return words[Math.floor(Math.random() * words.length)];
 }
 
 document.onkeyup = function(event) {
-  var letter = event.key;
+  var letter = event.key.toLowerCase();
   console.log(letter);
 
   var found = false;
@@ -18,12 +18,28 @@ document.onkeyup = function(event) {
       if (letter === lettersArray[i]) {
          found = true;
       }
-      console.log("Index:", i, ", Value:", lettersArray[i], "Found:", found);
+      // console.log("Index:", i, ", Value:", lettersArray[i], "Found:", found);
   }
 
   if (!found) {
     lettersArray.push(letter);
+
+    var matchFound = false;
+    for (var i = 0; i < currentWord.length; i++) {
+      if  (letter === currentWord.charAt(i).toLowerCase()) {
+        matchFound = true;
+        console.log("Yay!!")
+      } else {
+        console.log("Oh no!")
+      }
+    }
+
+    if (!matchFound) {
+      triesLeft--;
+    }
   }
+
+  displayScore();
   document.getElementById("lettersGuessed").innerHTML = lettersArray.join(" "); 
 };
 
@@ -32,13 +48,12 @@ $(document).ready(function(){
   console.log(currentWord);
   document.getElementById("wordToGuess").innerHTML = currentWord;
   displayScore();
-
-  
  }) 
 
 var displayScore = function() {
   document.getElementById("wins").innerHTML = winCount;
   document.getElementById("losses").innerHTML = lossCount;
+  document.getElementById("tries").innerHTML = triesLeft;
 };
 
 var bangmaak = function(naam) {

@@ -22,27 +22,27 @@ var textAreaElement = document.getElementsByTagName('textarea') [0];
     alert("Computer guess: " + computerGuess);        
 
 
-// var word = "poespas".toLowerCase().split("");
-// var displayedWord = "_".repeat(word.length).split("");
+var word = "poespas".toLowerCase().split("");
+var displayedWord = "_".repeat(word.length).split("");
 
 
-// guess = "l".toLowerCase();
+guess = "l".toLowerCase();
 
-// var matches = 0;
+var matches = 0;
 
-// for (var i = 0; i < word.length; i++) {
-// // alert(word[i]);
-// console.log(word[i])
-// if (word[i] == guess) {
-//     // alert("Ditsem!")
-//     console.log("Heita!")
-//     displayedWord[i] = guess;
-//     matches++;
-// }
-// }
+for (var i = 0; i < word.length; i++) {
+// alert(word[i]);
+console.log(word[i])
+if (word[i] == guess) {
+    // alert("Ditsem!")
+    console.log("Heita!")
+    displayedWord[i] = guess;
+    matches++;
+}
+}
 
-// console.log(displayedWord.join(""));
-// console.log("Matches: " + matches );
+console.log(displayedWord.join(""));
+console.log("Matches: " + matches );
 
 var wins = 0
 var lose = 0
