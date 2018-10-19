@@ -2,7 +2,7 @@ var lettersArray = [];
 var allWords = ["Pluto", "Eeyore", "Spiderman", "Scrooge", "Homer", "Dopey", "Superman", "Stitch", "Animaniacs", "Popeye", "PorkyPig", "Cinderella", "Bart", "Goofy", "SpeedyGonzales"];
 var currentWord = "";
 var winCount = 0;
-var lossCount = 10;
+var lossCount = 0;
  
 // Choose a random element from the array
 var getRandomWord = function(words) {
@@ -10,9 +10,21 @@ var getRandomWord = function(words) {
 }
 
 document.onkeyup = function(event) {
-  winCount = winCount + 1;
-  lossCount = lossCount - 1;
-  displayScore();  
+  var letter = event.key;
+  console.log(letter);
+
+  var found = false;
+  for (var i = 0; i < lettersArray.length; i++) {
+      if (letter === lettersArray[i]) {
+         found = true;
+      }
+      console.log("Index:", i, ", Value:", lettersArray[i], "Found:", found);
+  }
+
+  if (!found) {
+    lettersArray.push(letter);
+  }
+  document.getElementById("lettersGuessed").innerHTML = lettersArray.join(" "); 
 };
 
 $(document).ready(function(){ 
