@@ -6,6 +6,8 @@ var lossCount = 0;
 var correctGuesses;
 var triesLeft;
 var displayedLetters; 
+var applauseSound = new Audio("assets/sound/applause.mp3");
+var wahSound = new Audio("assets/sound/lose.mp3")
 // Choose a random element from the array
 var getRandomWord = function(words) {
   return words[Math.floor(Math.random() * words.length)];
@@ -45,12 +47,14 @@ document.onkeyup = function(event) {
     if (triesLeft === 0) {
       // player lost 
       lossCount++;
+      wahSound.play();
       resetGame();
     } 
 
     if (correctGuesses === currentWord.length) {
-      //player won
+      // player won
       winCount++;
+      applauseSound.play();
       resetGame();
     }
   }
@@ -65,7 +69,7 @@ $(document).ready(function(){
  }) 
 
 var resetGame = function() {
-  triesLeft = 12; 
+  triesLeft = 10; 
   currentWord = getRandomWord(allWords);
   displayedLetters = "_".repeat(currentWord.length).split("");
   lettersArray = [];
@@ -78,7 +82,6 @@ var displayState = function() {
   document.getElementById("wins").innerHTML = winCount;
   document.getElementById("losses").innerHTML = lossCount;
   document.getElementById("tries").innerHTML = triesLeft;
-  document.getElementById("wordToGuess").innerHTML = currentWord;
   document.getElementById("letterOptions").innerHTML = displayedLetters.join(" ");
 };
 
