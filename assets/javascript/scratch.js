@@ -179,3 +179,7 @@ console.log('randomWord', randomWord);
    console.log(letter);
    lettersArray.push(letter);
    document.getElementById("lettersGuessed").innerHTML = lettersArray.join(" ");
+
+   <h1 class="red-text text-center">Cartoon Word Guess Game</h1>
+
+    <h2 class="red-text text-center">Press any key to get started</h2>

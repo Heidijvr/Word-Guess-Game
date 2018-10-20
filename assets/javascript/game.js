@@ -1,8 +1,9 @@
 var lettersArray = [];
-var allWords = ["Pluto", "Eeyore", "Spiderman", "Scrooge", "Homer", "Dopey", "Superman", "Stitch", "Animaniacs", "Popeye", "PorkyPig", "Cinderella", "Bart", "Goofy", "SpeedyGonzales"];
+var allWords = ["Pluto", "Eeyore", "Spiderman", "Scrooge", "Homer", "Dopey", "Superman", "Stitch", "Animaniacs", "Popeye", "Pikachu", "Cinderella", "Bart", "Goofy", "Joker"];
 var currentWord = "";
 var winCount = 0;
 var lossCount = 0;
+var correctGuesses;
 var triesLeft;
 var displayedLetters; 
 // Choose a random element from the array
@@ -27,10 +28,11 @@ document.onkeyup = function(event) {
 
     var matchFound = false;
     for (var i = 0; i < currentWord.length; i++) {
-      if  (letter === currentWord.charAt(i).toLowerCase()) {
+      if (letter === currentWord.charAt(i).toLowerCase()) {
         matchFound = true;
         console.log("Yay!!")
         displayedLetters[i] = currentWord.charAt(i);
+        correctGuesses++;
       } else {
         console.log("Oh no!")
       }
@@ -39,13 +41,18 @@ document.onkeyup = function(event) {
     if (!matchFound) {
       triesLeft--;
     } 
-    
 
     if (triesLeft === 0) {
       // player lost 
       lossCount++;
       resetGame();
     } 
+
+    if (correctGuesses === currentWord.length) {
+      //player won
+      winCount++;
+      resetGame();
+    }
   }
 
     
@@ -62,6 +69,7 @@ var resetGame = function() {
   currentWord = getRandomWord(allWords);
   displayedLetters = "_".repeat(currentWord.length).split("");
   lettersArray = [];
+  correctGuesses  = 0;
   displayState();
   console.log(currentWord); 
 };
@@ -74,7 +82,7 @@ var displayState = function() {
   document.getElementById("letterOptions").innerHTML = displayedLetters.join(" ");
 };
 
-var bangmaak = function(naam) {
-  console.log("Boo " + naam);
-};
+
+
+
 

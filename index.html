@@ -3,37 +3,44 @@
 <head>
     <meta charset="UTF-8">    
     <title>Cartoons Word Guess Game</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
+
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
     
 </head>
-<body>        
+<body>  
+    
+    
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Cartoon Word Guess Game</h1>
+        <h2 class="lead">Press any key to get started</h2>
+    </div>
+ </div>
 
-    <h1 class="text-center">Cartoon Word Guess Game</h1>
-
-    <h2 class="text-center" id="gameState">Press any key to get started</h2>
+    
 
 
     <h1 class="text-center" id="random-word"></h1>
 
     <div>
-        <p>Wins: <span id="wins"></span></p>     
-        <p>Losses: <span id="losses"></span></p>
+        <p class="red-text text-center">Wins: <span id="wins"></span></p>   
+        <p class="red-text text-center">Losses: <span id="losses"></span></p>
     </div>
 
     <div>
-        <p>Tries Left: <span id="tries"></span></p>
+        <p class="red-text text-center">Tries Left: <span id="tries"></span></p>
     </div>
 
-    <p> <span id="letterOptions"></span></p> 
+    <p class="red-text text-center"> <span id="letterOptions"></span></p> 
 
-    <p>Word (should be hidden)<span id="wordToGuess"></span></p>
-    <p>Previous guesses: <span id="lettersGuessed"></span></p>
+    <p class="red-text text-center">Word (should be hidden)<span id="wordToGuess"></span></p>
+    <p class="red-text text-center">Previous guesses: <span id="lettersGuessed"></span></p>
 
    
 </body>
