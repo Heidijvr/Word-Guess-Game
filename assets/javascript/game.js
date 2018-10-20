@@ -1,5 +1,5 @@
 var lettersArray = [];
-var allWords = ["Pluto", "Eeyore", "Spiderman", "Scrooge", "Homer", "Dopey", "Superman", "Stitch", "Animaniacs", "Popeye", "Pikachu", "Cinderella", "Bart", "Goofy", "Joker"];
+var allWords = ["Pluto", "Eeyore", "Garfield", "Sylvester", "Pinocchio", "Spiderman", "Itchy", "Scrooge", "Scratchy", "Wolverine", "Homer", "Batman", "Dopey", "Superman", "Stitch", "Animaniacs", "Popeye", "Pikachu", "Cinderella", "Bart", "Goofy", "Joker"];
 var currentWord = "";
 var winCount = 0;
 var lossCount = 0;
@@ -58,8 +58,7 @@ document.onkeyup = function(event) {
       resetGame();
     }
   }
-
-    
+   
   displayState();
   document.getElementById("lettersGuessed").innerHTML = lettersArray.join(" "); 
 };
