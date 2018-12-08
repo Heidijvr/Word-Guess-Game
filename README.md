@@ -17,8 +17,8 @@ This project is part of the front-end curriculum for the University of Washingto
 
 **Own additions:**
 
-* Play audible (applause) when the player won.
-* Play audible (wahSound) when the player lost.
+* Play audible (applause) when the player *won.
+* Play audible (wahSound) when the player *lost.
 
 -----
 
