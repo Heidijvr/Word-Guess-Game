@@ -11,7 +11,7 @@ This project is part of the front-end curriculum for the University of Washingto
 * If the word is 'wonderful', display it like this when the game starts: _ _ _ _ _ _ _ _ _.
 * As the user guesses the correct letters, reveal them as guessed: w o n d _  _ f _ _.
 * Letters already guessed: displayed e.g. like L Z Y H.
-* The pLayer has ten incorrect tries at his/her disposal.
+* The player has ten incorrect tries at his/her disposal.
 * An indication of _wins_ required (number of times user guessed the word correctly).
 * After the user wins/loses the game should automatically choose another word and start the next game.
 
