@@ -31,3 +31,4 @@ This project is part of the front-end curriculum for the University of Washingto
 * Bootstrap Library
 * HTML5
 * CSS
+* Google Fonts
