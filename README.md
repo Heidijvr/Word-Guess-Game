@@ -3,9 +3,9 @@
 A stylized Trivia Browser browser game, built with JavaScript for the logic, jQuery to manipulate HTML, HTML and CSS for styling ([Play the Word Guess Game!]( https://heidijvr.github.io/Word-Guess-Game/)).
 This project is part of the front-end curriculum for the University of Washington Part-time Coding Bootcamp.
 
------
-
 <img src="https://heidijvr.github.io/Word-Guess-Game/assets/images/CartoonGameScreenshot.png" alt="Cartoon Word Game">
+
+-----
 
 **Project Requirements:**
 
