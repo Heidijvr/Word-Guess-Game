@@ -8,34 +8,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Mountains+of+Christmas|Philosopher" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
     
 </head>
 <body>    
-    
-<div class="jumbotron jumbotron-fluid">
+      
+<div id="heading">
+    <div id="title"><h1>Cartoon Word Guess Game</h1>
+    <p>Choose a letter to Start the Game</p>
+    </div>
+</div>
+
     <div class="container">
-        <h1 class="display-4">Cartoon Word Guess Game</h1>
-        <h2 class="lead">Press a key to guess a letter</h2>
+        <h1 id="random-word"></h1>    
+
+        <p style="text-align:center">Wins: <span id="wins"></span><br><br>
+
+            Losses: <span id="losses"></span></p>
+
+            <p style="text-align:center">Tries Left: <span id="tries"></span></p>    
+
+                <p style="text-align:center"><span id="letterOptions"></span></p>  
+                
+                    <p style="text-align:center">Previous guesses: <span id="lettersGuessed"></span></p>
+
     </div>
- </div>   
-
-    <h1 class="text-center" id="random-word"></h1>
-
-    <div>
-        <p class="red-text text-center">Wins: <span id="wins"></span></p>   
-        <p class="red-text text-center">Losses: <span id="losses"></span></p>
-    </div>
-
-    <div>
-        <p class="red-text text-center">Tries Left: <span id="tries"></span></p>
-    </div>
-
-    <p class="red-text text-center"> <span id="letterOptions"></span></p> 
-
-    <p class="red-text text-center">Previous guesses: <span id="lettersGuessed"></span></p>
-   
+       
 </body>
 </html>

@@ -1,52 +1,58 @@
-h1 {
-    font-size: 50px;
-    font-weight: bold;
-    font-family: "Georgia", "Times New Roman", "Times";
-    padding-top: 20px;
+body { 
+    background: url("../images/kids-art-background.jpg");
+    background-size: 100w;
+    background-repeat:no-repeat;
+    background-position: center center;  
+    /* color:#FFF;
+    font-family:Arial, Helvetica, sans-serif; */
+    min-height: 100%;
+} 
+   
+body, html {
+    overflow-x: hidden;
+    height: auto;
 }
 
-h2 {
-    font-size: 26px;
+#heading {
+    text-align: center;
+    padding-top: 50px;   
+}
+
+h1 {
+    font-size: 76px;
     font-weight: bold;
-    font-family: "Courier New", "Courier", "Monospace";
-    padding-top: 30px;
     padding-bottom: 30px;
+    font-family: 'Mountains of Christmas', cursive;
 }
 
 .container {
+    color: rgb(249, 253, 7);
+    /* text-shadow: 1px 1px 2px rgb(241, 237, 237), black, 0 0 5px darkblue; */
     text-align: center;
-    padding: -20px;
+    padding: 40px; 
 }
 
 p {
-    font-size: 26px;
+    font-size: 40px;
     font-weight: bold;
-    font-family: "Georgia", "Times New Roman", "Times";
+    font-family: 'Philosopher', sans-serif;
     padding-bottom: 67px;
-}
-
-#letterOptions {
-    font-size: 40px; 
-}
-
-.text-center {
-    background-color: #fffdd0;
-    border-width: 3px;
 }
 
 .Wins {
     font-size: 26px;
     font-weight: bold;
+    color: brown;
 }
 
 #lettersGuessed {
-    display:inline-block;
-    width:300px; 
+    display: inline-block;
+    width: 350px; 
     background-color: rgb(255, 102, 0);
 }
 
 #tries {
-  display:inline-block; 
-  width:45px; 
-  background-color:rgb(255, 102, 0);
+  display: inline-block; 
+  width: 45px; 
+  background-color: rgb(255, 102, 0);
 }
