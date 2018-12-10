@@ -5,6 +5,8 @@ This project is part of the front-end curriculum for the University of Washingto
 
 -----
 
+<img src="https://heidijvr.github.io/Word-Guess-Game/assets/images/CartoonGameScreenshot.png" alt="Cartoon Word Game">
+
 **Project Requirements:**
 
 * Press any letter to get started!
