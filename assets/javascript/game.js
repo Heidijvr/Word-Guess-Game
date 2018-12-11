@@ -48,7 +48,9 @@ document.onkeyup = function(event) {
       // player lost 
       lossCount++;
       wahSound.play();
-      resetGame();
+      $("#correctWordDiv").show();
+      $("#guessesDiv").hide();
+      setTimeout(resetGame, 4000);
     } 
 
     if (correctGuesses === currentWord.length) {
@@ -74,6 +76,9 @@ var resetGame = function() {
   lettersArray = [];
   correctGuesses  = 0;
   displayState();
+  $("#correctWordDiv").hide();
+  $("#guessesDiv").show();
+  $("#correctWord").text(currentWord + "!");
   console.log(currentWord); 
 };
 
